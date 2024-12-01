@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "ts-node ./src/test",
-		"auto": "nodemon -w ./src -e ts --exec \"npm start\""
+		"auto": "nodemon -w ./src -e ts,txt --exec \"npm start\""
 	},
 	"keywords": [],
 	"author": "",
