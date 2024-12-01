@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const input = getInput();
+const input = fs.readFileSync(__dirname + "/input.txt").toString();
 const inputLines = input.split("\n").map((line) => line.trim());
 
 // write code here
@@ -17,7 +17,3 @@ function solvePart2(): number {
 
 console.log("Part 1 result: " + solvePart1());
 console.log("Part 2 result: " + solvePart2());
-
-function getInput(): string {
-	return fs.readFileSync(__dirname + "/input.txt").toString();
-}
