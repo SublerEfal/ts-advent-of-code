@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "ts-node ./src/test",
-		"auto": "nodemon -w ./src -e ts,txt --exec \"npm start\""
+		"start": "nodemon -w ./src -e ts,txt --exec \"ts-node ./src/test\"",
+		"start-once": "ts-node ./src/test"
 	},
 	"keywords": [],
 	"author": "",
