@@ -26,7 +26,6 @@ function solvePart2(): number {
 	}
 	return total;
 }
-// finish writing code here
 
 function readMul(fullString: string, startIndex: number): number | null {
 	if (fullString.substring(startIndex, startIndex + 4) !== "mul(") {
@@ -51,6 +50,7 @@ function readMul(fullString: string, startIndex: number): number | null {
 
 	return nr1 * nr2;
 }
+// finish writing code here
 
 console.log("Part 1 result: " + solvePart1());
 console.log("Part 2 result: " + solvePart2());
