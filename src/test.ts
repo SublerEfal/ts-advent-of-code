@@ -1,1 +1,1 @@
-import "./2024/08/solve";
+import "./2024/09/solve";
