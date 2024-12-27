@@ -24,37 +24,38 @@ function solvePart1(): string {
 }
 
 function solvePart2(): number {
-	// part = "part1";
-	// // 100000000000 (100 billion) is too low
-	// initialA = 1;
-	// // while (outputArray.length > 0) {
-	// for (let i = 0; i < 1000; i++) {
-	// 	// outputArray = instructions.slice().map((v) => v.toString());
-	// 	outputArray = [];
-	// 	A = initialA++;
-	// 	B = 0;
-	// 	C = 0;
-	// 	pointer = 0;
-	// 	// if (A % 1000000 === 0) console.log(A);
-	// 	runProgram();
-	// 	console.log(`${initialA}: ${outputArray.join(",")}`);
-	// }
-	// return initialA - 1;
-
-	part = "part2";
+	part = "part1";
 	// 100000000000 (100 billion) is too low
-	initialA = Math.pow(8, instructions.length - 1);
-	console.log(initialA);
-	while (outputArray.length > 0) {
-		outputArray = instructions.slice().map((v) => v.toString());
+	initialA = 0;
+	// while (outputArray.length > 0) {
+	for (let i = 0; i < 1000; i++) {
+		// outputArray = instructions.slice().map((v) => v.toString());
+		outputArray = [];
 		A = initialA++;
 		B = 0;
 		C = 0;
 		pointer = 0;
-		if (A % 1000000 === 0) console.log(A);
+		// if (A % 1000000 === 0) console.log(A);
 		runProgram();
+		// console.log(`${initialA - 1}: ${outputArray.join(",")}`);
+		console.log(`${initialA - 1}: ${outputArray.map((v) => parseInt(v).toString(8)).join("")}`);
 	}
 	return initialA - 1;
+
+	// part = "part2";
+	// // 100000000000 (100 billion) is too low
+	// initialA = Math.pow(8, instructions.length - 1);
+	// console.log(initialA);
+	// while (outputArray.length > 0) {
+	// 	outputArray = instructions.slice().map((v) => v.toString());
+	// 	A = initialA++;
+	// 	B = 0;
+	// 	C = 0;
+	// 	pointer = 0;
+	// 	if (A % 1000000 === 0) console.log(A);
+	// 	runProgram();
+	// }
+	// return initialA - 1;
 }
 
 function runProgram(): void {
